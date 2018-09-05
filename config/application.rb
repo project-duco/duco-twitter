@@ -26,5 +26,9 @@ module DucoTwitter
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key    = "YOUR_CONSUMER_KEY"
+      config.consumer_secret = "YOUR_CONSUMER_SECRET"
+    end
   end
 end
