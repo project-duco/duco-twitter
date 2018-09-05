@@ -1,0 +1,3 @@
+var tweets = document.getElementById('25-tweets');
+tweets.innerHTML = ""
+tweets.insertAdjacentHTML('beforeend','<%= escape_javascript(render partial: 'tweets' ) %>');

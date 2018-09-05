@@ -1,1 +1,5 @@
-<p>search form</p>
+<%= form_tag("/tweets", method: "post", remote: "true") do %>
+  <%= label_tag(:username, "Twitter Username:") %>
+  <%= text_field_tag(:username) %>
+  <%= submit_tag("Get Tweets") %>
+<% end %>
