@@ -8,7 +8,7 @@ class MainController < ApplicationController
     @tweets = []
 
     begin
-      DucoTwitter::Application::CLIENT.user_timeline(@username, result_type: "recent").take(25).each do |tweet|
+      DucoTwitter::Application::CLIENT.user_timeline(@username, result_type: "recent", count: 25).each do |tweet|
         @tweets << tweet
       end
     rescue StandardError => e
