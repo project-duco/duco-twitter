@@ -1,9 +1,9 @@
 <% if @tweets.count > 0 %>
+<ol>
   <% @tweets.each do |tweet| %>
-    <ul>
       <li><%= tweet.text %></li>
-    </ul>
   <% end %>
+</ol>
 <% else %>
  <p style="color:red">A error has occured. The username you have entered probably does not exist. Please try again.</p>
 <% end %>
